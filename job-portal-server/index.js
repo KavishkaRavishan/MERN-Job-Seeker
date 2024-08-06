@@ -116,9 +116,8 @@ async function run() {
 
 run().catch(console.dir);
 
-app.get("/", async (req, res) => {
-  const jobs = await jobsCollections.find({}).toArray();
-  res.send(jobs);
+app.get("/", (req, res) => {
+  res.send("Hello developer");
 });
 
 app.listen(port, "0.0.0.0", () => {
