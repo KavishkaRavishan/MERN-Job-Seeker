@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "client": "cd Job-Portal-Client && npm run dev",
-    "start": "concurrently \"node index.js\" \"npm run client\"",
+    "start": "node index.js",
     "build": "npm install && npm install --prefix Job-Portal-Client && npm run build --prefix Job-Portal-Client"
   },
   "keywords": [],
