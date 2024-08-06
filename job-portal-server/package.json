@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
-    "start": "node index.js",
+    "client": "cd Job-Portal-Client && npm run dev",
+    "start": "concurrently \"node index.js\" \"npm run client\"",
     "build": "npm install && npm install --prefix Job-Portal-Client && npm run build --prefix Job-Portal-Client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
