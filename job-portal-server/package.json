@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    "build": "npm install && npm install --prefix Job-Portal-Client && npm run build --prefix Job-Portal-Client"
+    "build": "npm install && npm install --prefix Job-Portal-Client && npm run dev --prefix Job-Portal-Client"
   },
   "keywords": [],
   "author": "",
