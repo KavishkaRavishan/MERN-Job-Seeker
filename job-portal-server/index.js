@@ -2,7 +2,9 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-//const path = require("path");
+const path = require("path");
+
+const __dirname = path.resolve();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -22,7 +24,7 @@ const client = new MongoClient(uri, {
   },
 });
 
-//app.use(express.static(path.join(__dirname, "/Job-Portal-Client/")));
+app.use(express.static(path.join(__dirname, "/Job-Portal-Client/dist")));
 
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "Job-Portal-Client", "index.html"));
